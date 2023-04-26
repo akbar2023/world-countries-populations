@@ -24,33 +24,34 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
 			</plugin>
+			<!-- 
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 			</plugin>
+			 -->
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
-			    <artifactId>mule-maven-plugin</artifactId>
-			    <version>2.1</version>
-			    <extensions>true</extensions>
-			    <configuration>
-			    	<cloudHubDeployment>
-			    		<uri>https://anypoint.mulesoft.com</uri>
-			    		<muleVersion>${mule.version}</muleVersion>
-			    		<!-- Deploy user parameter -->
-			    		<username>${anypoint.username}</username>
-			    		<password>${anypoint.password}</password>
-			    		
-			    		<environnement>${env}</environnement>
-			    		<applicationName>${appname}</applicationName>
-			    		<businessGroup>${business}</businessGroup>
-			    		<workerType>${vCore}</workerType>
-			    		<workers>${workers}</workers>
-			    		<objectStoreV2>true</objectStoreV2>
-			    	</cloudHubDeployment>
-			    </configuration>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>2.1</version>
+				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${mule.version}</muleVersion>
+						<!-- Deploy user parameter -->
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						<environnement>${env}</environnement>
+						<applicationName>${appname}</applicationName>
+						<businessGroup>${business}</businessGroup>
+						<workerType>${vCore}</workerType>
+						<workers>${workers}</workers>
+						<objectStoreV2>true</objectStoreV2>
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
